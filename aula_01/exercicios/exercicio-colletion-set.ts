@@ -4,12 +4,7 @@ const numeros: Set<number> = new Set<number>();
 
 for (let i = 0; i < 10; i++) {
   let numeroResposta = leia.questionFloat("Digite um Numero Inteiro (Por favor, nao repita o numero.");
-
-  if (!numeros.has(numeroResposta)) {
-    numeros.add(numeroResposta);
-  } else {
-    leia.questionFloat("Digite um numero diferente.");
-  }
+  numeros.add(numeroResposta);
 }
 
 console.log("Listar dados do Set: ");
