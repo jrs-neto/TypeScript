@@ -1,5 +1,5 @@
 // Remove sempre o último elemento que entrou
-import leia = require("readline-sync");
+import leia from "readline-sync";
 import Stack = require("./stack");
 
 const pilha = new Stack<string>();

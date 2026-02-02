@@ -1,5 +1,5 @@
 import stack = require("../stack");
-import leia = require("readline-sync");
+import leia from "readline-sync";
 
 const pilha = new stack<string>();
 let opcoes: string;

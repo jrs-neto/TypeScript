@@ -1,5 +1,5 @@
 // First In - First Out (Primeiro que entra, é o primeiro que sai)
-import leia = require("readline-sync");
+import leia from "readline-sync";
 import Queue = require("./queue");
 
 const fila = new Queue<string>();

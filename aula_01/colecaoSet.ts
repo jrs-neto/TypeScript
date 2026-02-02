@@ -1,4 +1,4 @@
-import leia = require("readline-sync");
+import leia from "readline-sync";
 
 const cores: Set<string> = new Set<string>();
 

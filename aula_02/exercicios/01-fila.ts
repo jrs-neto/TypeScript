@@ -1,5 +1,5 @@
 import Queue = require("../queue");
-import leia = require("readline-sync");
+import leia from "readline-sync";
 
 const fila = new Queue<string>();
 let opcoes: string;

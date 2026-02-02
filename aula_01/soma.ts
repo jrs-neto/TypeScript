@@ -1,4 +1,4 @@
-import leia = require("readline-sync");
+import leia from "readline-sync";
 
 let qualquerCoisa: any; // Serve para qualquer coisa, number, string, boolean, etc...
 

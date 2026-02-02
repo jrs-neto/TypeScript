@@ -1,4 +1,4 @@
-import leia = require("readline-sync");
+import leia from "readline-sync";
 
 const participantes: Map<number, string> = new Map<number, string>();
 
