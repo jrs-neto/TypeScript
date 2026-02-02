@@ -8,7 +8,7 @@ interface stackInterface<Type> {
   contains(dataItem: Type): boolean; // Verifica se um elemento existe na pilha
   clear(): void; // Remove todos os elementos da pilha
 }
-class Stack<Type> implements stackInterface<Type> {
+export class Stack<Type> implements stackInterface<Type> {
   private StackData: Array<Type> = [];
   constructor() {}
   isEmpty(): boolean {
@@ -57,5 +57,3 @@ class Stack<Type> implements stackInterface<Type> {
     this.StackData.length = 0;
   }
 }
-
-export = Stack;

@@ -9,7 +9,7 @@ interface queueInterface<Type> {
   clear(): void; // Para limpar a fila toda
 }
 
-class Queue<Type> implements queueInterface<Type> {
+export class Queue<Type> implements queueInterface<Type> {
   private QueueData: Array<Type> = [];
 
   constructor() {}
@@ -66,5 +66,3 @@ class Queue<Type> implements queueInterface<Type> {
     this.QueueData.length = 0;
   }
 }
-
-export = Queue;
