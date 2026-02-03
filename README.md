@@ -51,11 +51,10 @@ Os exemplos foram desenvolvidos com base nas aulas ao vivo (*Live Codes*) e em e
 | Aula 01 | Introdução ao TypeScript e Collections  | Conceitos básicos de TypeScript, tipagem e uso de coleções. |
 | Aula 02 | Estruturas de Dados                     | Uso de estruturas para organizar e manipular dados.         |
 | Aula 03 | Funções                                 | Criação e tipagem de funções reutilizáveis.                 |
-| Aula 04 | Programação Orientada a Objetos I       | Criação de classes, objetos, métodos e encapsulamento.      |
-| Aula 05 | Programação Orientada a Objetos II      | Reutilização de código com herança e polimorfismo.          |
-| Aula 06 | Programação Orientada a Objetos III     | Definição de contratos com classes abstratas e interfaces.  |
-| Aula 07 | Tratamento de Exceções                  | Captura e tratamento de erros com try/catch.                |
-| Aula 08 | Programação Funcional (Arrow Functions) | Uso de arrow functions e conceitos funcionais.              |
+| Aula 04 | Programação Orientada a Objetos         | Herança e Polimorfismo.                                     |
+| Aula 05 | Programação Orientada a Objetos         | Classes Abstratas e Interfaces.                             |
+| Aula 06 | Tratamento de Exceções                  | Captura e tratamento de erros com try/catch.                |
+| Aula 07 | Programação Funcional (Arrow Functions) | Uso de arrow functions e conceitos funcionais.              |
 
 <br />
 
@@ -72,7 +71,6 @@ Os exemplos foram desenvolvidos com base nas aulas ao vivo (*Live Codes*) e em e
 ├── aula05/
 ├── aula06/
 ├── aula07/
-├── aula08/
 └── README.md
 ```
 
@@ -99,7 +97,7 @@ Para executar os exemplos localmente, você precisará de:
 1. Clone o repositório
 
 ```bash
-git clone https://github.com/jrs-neto/TypeScript-Bootcamp-Generation.git
+git clone https://github.com/jrs-neto/TypeScript-Bootcamp-Generation
 ```
 
 2. Abra a pasta do projeto no **Visual Studio Code**
@@ -121,90 +119,6 @@ ts-node nome_do_arquivo.ts
 ```bash
 ts-node HelloWorld.ts
 ```
-
-<br />
-
-## Configurações - `tsconfig.json`
-
-
-
-### **`target: "es2020"`**
-
-Define a versão do JavaScript gerado como **ECMAScript 2020**.
-Permite usar recursos modernos, como `async/await`, `optional chaining` e `Promise.allSettled`.
-
-------
-
-### **`module: "commonjs"`**
-
-Define o sistema de módulos como **CommonJS**, padrão do Node.js.
-Permite usar `require()` e `module.exports` ou compatibilidade com `import`.
-
-------
-
-### **`esModuleInterop: true`**
-
-Facilita a interoperabilidade entre **CommonJS** e **ES Modules**.
-Permite importar módulos CommonJS assim:
-
-```ts
-import express from "express";
-```
-
-Em vez de:
-
-```ts
-import * as express from "express";
-```
-
-------
-
-### **`forceConsistentCasingInFileNames: true`**
-
-Garante consistência entre **maiúsculas e minúsculas** nos imports.
-Evita erros em sistemas Linux/macOS (case-sensitive).
-
-Exemplo de erro evitado:
-
-```ts
-import User from "./user"; // errado se o arquivo for User.ts
-```
-
-------
-
-### **`strict: true`**
-
-Ativa o **modo estrito completo** do TypeScript.
-Força tipagem mais segura e reduz bugs em tempo de execução.
-
-Inclui regras como:
-
-- Não permitir `any` implícito
-- Melhor verificação de `null` e `undefined`
-- Checagem mais rigorosa em funções e classes
-
-------
-
-### **`skipLibCheck: true`**
-
-Ignora a verificação de tipos em arquivos `.d.ts` (bibliotecas externas).
-Resultado:
-
-- Compilação **mais rápida**
-- Menos erros vindos de dependências externas
-
-<br />
-
-### Resumo Rápido (o que isso garante)
-
-| Benefício                | Impacto                            |
-| ------------------------ | ---------------------------------- |
-| JavaScript moderno       | `target: es2020`                   |
-| Compatibilidade Node.js  | `module: commonjs`                 |
-| Imports mais simples     | `esModuleInterop`                  |
-| Menos bugs               | `strict`                           |
-| Build mais rápido        | `skipLibCheck`                     |
-| Consistência de arquivos | `forceConsistentCasingInFileNames` |
 
 <br />
 
